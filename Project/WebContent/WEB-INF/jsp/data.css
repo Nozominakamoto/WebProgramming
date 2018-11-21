@@ -1,0 +1,15 @@
+.userName{
+	text-align:right;
+}
+
+.title{
+	text-align:center;
+}
+.data{
+	text-align:center;
+}
+
+.data {
+	width: 400px;
+	margin: 90px auto;
+}

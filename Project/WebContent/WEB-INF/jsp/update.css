@@ -1,0 +1,25 @@
+.userName{
+	text-align:right;
+}
+
+.title{
+	text-align:center;
+}
+
+.form-inline{
+	text-align:center;
+}
+
+.btn-outline-dark{
+	text-align:center;
+}
+
+.form-login {
+	width: 300px;
+	margin: 80px auto;
+}
+
+.login-btn{
+	margin-top: 30px;
+	margin-left: 150px;
+}

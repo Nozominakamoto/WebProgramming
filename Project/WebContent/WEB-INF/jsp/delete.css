@@ -1,0 +1,18 @@
+.userName{
+	text-align:right;
+}
+
+.form-delete{
+	text-align:center;
+}
+
+
+.contens{
+	width: 400px;
+	margin: 60px auto;
+}
+
+.btn-toolbar{
+	width: 300px;
+	margin: 70px auto;
+}
