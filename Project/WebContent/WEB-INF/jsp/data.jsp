@@ -15,24 +15,35 @@
 </head>
 
 <body>
+
+<c:if test="${userInfo == null}" >
+	  <% response.sendRedirect("loginS"); %>
+ </c:if>
+
 <p class="text-white bg-secondary userName">
-		ユーザ名さん&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A HREF="jump.html" class="text-danger">ログアウト</a> </p>
+		${userInfo.name}さん&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A HREF="logoutS" class="text-danger">ログアウト</a> </p>
 <h1 class="title">ユーザ情報詳細参照</h1>
 
 
 
-<div class="data" style="white-space:pre-wrap;">ログインID
-
-ユーザ名
-
-生年月日
-
-登録日時
-
-更新日時
+<div class="data" style="white-space:pre-wrap;">
 
 
-<A HREF="jump.html">戻る</a>
+
+	ログインID ${UserData.loginId}
+
+	ユーザ名   ${UserData.name}
+
+	生年月日   ${UserData.birthDate}
+
+	登録日時   ${UserData.createDate}
+
+	更新日時   ${UserData.updateDate}
+
+
+
+
+<A HREF="listS">戻る</a>
 </div>
 
 

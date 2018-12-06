@@ -15,24 +15,29 @@
 </head>
 <body>
 
+<c:if test="${userInfo == null}" >
+	  <% response.sendRedirect("loginS"); %>
+ </c:if>
+
 	<p class="text-white bg-secondary userName">
-		ユーザ名さん&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A HREF="jump.html" class="text-danger">ログアウト</a>
+		${userInfo.name}さん&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A HREF="logoutS" class="text-danger">ログアウト</a>
 	</p>
 
 	<div class="form-delete">
 		<h1 class="title">ユーザ削除確認</h1>
 
-		<h5 class="contens">ログインID:id0001<br>
+		<h5 class="contens">ログインID:${UserData.loginId}<br>
 							を本当に削除してよろしいでしょうか。</h5>
 
 		<div class="btn-toolbar">
-		<form class="form-inline">
-			<button type="button" class="btn btn-outline-dark login-btn">キャンセル</button>
-		</form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<form class="form-inline">
-			<button type="button" class="btn btn-outline-dark login-btn">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-		</form>
+
+
+				<a class="cancel" href="listS">キャンセル</a>
+
+			<form action = "/UserManagement/deleteS" method = "post">
+				<input type="hidden" name="id" value="${id}">
+				<input type="submit" value = "OK">
+			</form>
 		</div>
 
 	</div>
